@@ -1,0 +1,39 @@
+How this Laravel project works
+
+User starts at Home Page (home.blade.php)
+
+Shows a welcome message and one link: "View All Students".
+
+That link goes to the students.record route, which calls the index() method in StudentController.
+
+User clicks “View All Students” → All Students Page (students.php)
+
+This page gets a $students variable from the controller.
+
+Loops through all students in the database and displays them in a table.
+
+Each row has a “View” link for that student.
+
+User clicks “View” on a student → Single Student Page (student.php)
+
+This page displays details for only that one student.
+
+Data is sent by the show($id) method in StudentController.
+
+Database
+
+A students table is created via the migration.
+
+The Student model represents that table.
+
+The $fillable array in the model allows Laravel’s mass assignment for name and email.
+
+Controller
+
+home() → returns the home page.
+
+index() → fetches all students from DB and sends them to students.php.
+
+show($id) → fetches one student by their ID and sends to student.php.
+
+redirectToHome() → redirects user to the home page.
