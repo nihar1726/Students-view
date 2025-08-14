@@ -47,5 +47,5 @@ Route::get('/student/{id}', [StudentController::class, 'show']);
 Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
 
 // Save form data
-Route::post('/students', [StudentController::class, 'store'])->name('students.store');
+Route::post('/students', [StudentController::class, 'submitForm'])->name('students.store');
 

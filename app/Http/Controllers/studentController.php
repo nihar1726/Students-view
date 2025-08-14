@@ -46,7 +46,7 @@ public function create()
 }
 
 // Store form data into database
-public function store(Request $request)
+public function submitForm(Request $request)
 {
     // Validate form input
     $request->validate([
